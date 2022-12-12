@@ -18,7 +18,7 @@ class App {
   }
 
   // -- getLiteralBook - returns a book object in literal notation -- //
-  getLiteralBook() {
+  getLiteralBook = () => {
     const literalBook = { };
     const arrFormInputs = Array.from(this.formInputs);
 
@@ -30,13 +30,13 @@ class App {
   }
 
   // -- displayBook - inserts a book in the DOM -- //
-  displayBook(book) {
+  displayBook = (book) => {
     const bookLi = book.createLi();
     this.booksUl.appendChild(bookLi);
   }
 
   // -- listBooks - list all the books from the library -- //
-  listBooks() {
+  listBooks = () => {
     if (this.library.books.length > 0) {
       this.library.books.forEach((book) => {
         this.displayBook(book);
@@ -45,7 +45,7 @@ class App {
   }
 
   // -- popError - shows a custom error if title/author are invalid -- //
-  popError() {
+  popError = () => {
     if (!this.invalidInput.validity.customError) {
       if (this.invalidInput.validity.valueMissing) {
         this.invalidInput.setCustomValidity(`Book ${this.invalidInput.placeholder} is required and can't be empty.`);
@@ -62,7 +62,7 @@ class App {
   }
 
   // -- removeBook - it deletes a Book from the DOM -- //
-  removeBook(event) {
+  removeBook = (event) => {
     const { target: t, target: { parentElement: pe } } = event;
     if (t.type === 'button') {
       const delBook = new Book({ title: pe.firstElementChild.textContent });
@@ -74,7 +74,7 @@ class App {
   }
 
   // -- addBook - inserts a book into the library & display the book in the DOM -- //
-  addBook(event) {
+  addBook = (event) => {
     const { target: t, target: { elements: e } } = event;
     event.preventDefault();
 
@@ -106,7 +106,7 @@ class App {
     }
   }
 
-  showMenu(event) {
+  showMenu = (event) => {
     const { target: t } = event;
     event.preventDefault();
 
@@ -129,4 +129,4 @@ class App {
   }
 }
 
-export default { App };
+export { App as default };

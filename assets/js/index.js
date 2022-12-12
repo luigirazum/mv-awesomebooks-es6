@@ -3,4 +3,4 @@
 // the project to work.
 
 // -- (I)mport module Book - it provides the Book class to create valid Book objects -- //
-import Book from '../modules/book.js';
+import Library from '../modules/library.js';

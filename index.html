@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>Awesome Books</title>
+</head>
+
+<body>
+  <div class="fullscreen">
+    <nav id="nav-menu">
+      <li class="logo">
+        <a href="" data-target="#list">Awsome Books</a>
+      </li>
+      <ul>
+        <li>
+          <a class="selected" href="" data-target="#list">List</a>
+        </li>
+        <li>
+          <a href="" data-target="#addnew">Add new</a>
+        </li>
+        <li>
+          <a href="" data-target="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="container">
+      <p id="showdaytime"></p>
+      <section id="list" class="active">
+        <h1>All Awesome Books</h1>
+        <!--<ul> #booklist will hold the list of books-->
+        <ul id="bookslist"></ul>
+        <!--EOF #booklist-->
+      </section> <!--EOF #list section-->
+  
+      <section id="addnew">
+        <h2>Add a new book</h2>
+        <!--form #addbook will be used to add new books-->
+        <form id="addbook" novalidate autofocus>
+          <ul>
+            <li>
+              <input type="text" id="title" name="booktitle" placeholder="Title" pattern="((\w|\d)+\s?)*(\w|\d)+"
+                minlength="6" required autofocus><br>
+            </li>
+            <li>
+              <input type="text" id="author" name="bookauthor" placeholder="Author" pattern="(\w+\s?)*(\w)+" minlength="6"
+                required><br>
+            </li>
+            <li>
+              <button type="submit" id="submitbook">Add</button>
+            </li>
+          </ul>
+        </form> <!--EOF #addbook form-->
+      </section> <!--EOF #addnew section-->
+  
+      <section id="contact">
+        <h2>Contact information</h2>
+        <p>Do have any questions or you just want to say "Hello"?</p>
+        <p>You can reach out to us!</p>
+        <ul>
+  
+          <li>Our e-mail: <a href="mailto:contact@awesomebooks.com">contact@awesomebooks.com</a></li>
+          <li>Our phone number: 0043586534422</li>
+          <li>Our address: Awesome Street 2022, 84503 Awsome City, AW</li>
+        </ul>
+      </section> <!--EOF #addbook section-->
+    </div> <!--EOF .container-->
+  
+    <footer>
+      <p>Copyright © Some rights reserved by AwesomeBooks, 2022</p>
+    </footer>
+  </div><!--EOF .fullscreen-->
+  <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>

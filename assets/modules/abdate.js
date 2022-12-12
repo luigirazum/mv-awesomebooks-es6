@@ -1,5 +1,10 @@
+// -- This is the AbDate module for AbDate class    -- //
+// - it uses DateTime from luxon library             - //
 import { DateTime } from './luxon.js';
 
+// - with AbDate class, we create a custom DateTime     - //
+// - object to show the DateTime in a format like:      - //
+// - Month day(st|nd|rd) year(4digit), hh:mm:ss (am|pm) - //
 class AbDate {
   constructor() {
     this.now = DateTime.now();

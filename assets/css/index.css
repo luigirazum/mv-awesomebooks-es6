@@ -1,0 +1,269 @@
+/* In this file you'll find the CSS styles
+   applied to AwesomeBooks App              */
+
+/* -- Fonts -- */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&display=swap');
+
+/* -- Set default font -- */
+:root {
+  /* -- Setting general variables -- */
+  --f-fam: 'Balsamiq Sans';
+  --s-reg: 0, 400;
+  --s-bld: 0, 700;
+
+  /* -- Setting the fonts -- */
+  font-size: 16px;
+
+  /* -- Setting borders -- */
+  --b-gen: 3px solid #000;
+  --b-hr: 2px solid #000;
+}
+
+/* --BASIC default BROWSER SETTINGS-- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: var(--f-fam);
+}
+
+body {
+  font-size: 1.1em;
+  line-height: 1.8;
+}
+
+.fullscreen {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding-inline: 0.3em;
+}
+
+#showdaytime {
+  text-align: right;
+  margin-top: 0.1em;
+}
+
+section {
+  display: none;
+}
+
+section.active {
+  padding-block-start: 1.5em;
+  display: flex;
+  flex-flow: column;
+}
+
+h1,
+h2 {
+  font-size: 2.5em;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 0.2em;
+}
+
+nav,
+footer {
+  border: var(--b-gen);
+  margin-inline: 0.3em;
+  padding: 0.2em 1em 0.2em 1.5em;
+  height: 1.7em;
+  margin-block-start: 0.4em;
+  display: flex;
+  text-align: center;
+}
+
+footer {
+  margin-block-start: auto;
+  margin-block-end: 0.4em;
+}
+
+nav ul {
+  display: flex;
+  border: none;
+}
+
+.logo {
+  margin-inline-end: auto;
+}
+
+nav li {
+  text-align: center;
+  padding-inline: 0.5em;
+  border-left: 2px solid #000;
+}
+
+form ul li {
+  display: flex;
+  padding: 0.5em;
+}
+
+nav li:nth-child(1) {
+  padding-inline: 1em;
+  border-left: none;
+}
+
+form ul {
+  border: none;
+  width: 100%;
+}
+
+#bookslist {
+  border: var(--b-gen);
+  height: calc(100vh - 14.5em);
+  overflow-x: hidden;
+}
+
+.selected {
+  font-weight: bolder;
+}
+
+a,
+a:visited {
+  display: inline-block;
+  width: fit-content;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bolder;
+}
+
+ul li:nth-child(odd) {
+  background-color: transparent;
+}
+
+#contact ul li {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 2em;
+}
+
+#list {
+  margin-block-start: 0;
+  margin-block-end: auto;
+}
+
+#list ul li {
+  padding-inline: 0.5em;
+  line-height: 2.5;
+  display: flex;
+  align-items: center;
+}
+
+#list ul li:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+#list ul li:hover,
+#list ul li:nth-child(odd):hover {
+  background-color: #bfbfbf;
+}
+
+#contact ul {
+  border: none;
+  margin-top: 1.5em;
+}
+
+#contact ul li a {
+  font-weight: bolder;
+}
+
+#contact h2 {
+  margin-bottom: 1em;
+}
+
+#contact p {
+  line-height: 1.5;
+}
+
+.book-title {
+  margin-inline-end: 0.3em;
+}
+
+.book-title::before,
+.book-title::after {
+  content: '"';
+}
+
+.book-author {
+  margin-inline-start: 0.3em;
+  margin-inline-end: auto;
+  text-transform: capitalize;
+}
+
+button {
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  border: var(--b-hr);
+  font-size: 0.85em;
+  background-color: #fff;
+  padding: 0.4em 0.85em;
+  box-shadow: 3px 3px 0 #000;
+}
+
+form li button {
+  margin-left: auto;
+}
+
+button:hover {
+  background-color: #3a3a3a;
+  color: #c0c0c0;
+}
+
+button:active {
+  margin-top: 3px;
+  margin-right: -3px;
+  box-shadow: none;
+  background-color: #7f7f7f;
+}
+
+form {
+  margin-inline: auto;
+  padding: 0 0.5em;
+  width: 70%;
+  max-width: 30rem;
+  min-width: 15rem;
+  justify-content: center;
+  line-height: 2.5;
+  display: flex;
+}
+
+input {
+  width: 100%;
+  font-size: 1.05em;
+  padding: 0.2em 0.3em;
+  border: var(--b-hr);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+input::placeholder {
+  color: #343434;
+}
+
+input:focus-visible::placeholder {
+  color: #a4a4a4;
+}
+
+#contact,
+#addnew {
+  max-width: 60%;
+  margin-inline: auto;
+  height: calc(100vh - 12.5em);
+}

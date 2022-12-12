@@ -2,5 +2,5 @@
 // where we link the different modules required for
 // the project to work.
 
-// -- (I)mport module Book - it provides the Book class to create valid Book objects -- //
-import Library from '../modules/library.js';
+// -- (I)mport module App - it provides the App class to create valid App object -- //
+import App from '../modules/app.js';

@@ -40,4 +40,4 @@ class Library {
   }
 }
 
-export default { Library };
+export { Library as default };
